@@ -16,7 +16,7 @@ export function HomeHeader({ logo, avatarName, avatarImage }) {
 
   return (
     <section>
-      <header className=" flex items-center justify-between rounded-lg border px-4  py-3">
+      <header className=" flex items-center justify-between rounded-lg border  py-2">
         <Link key="scd" href="/home">
           <Logo
             src={"/logo.png"}
@@ -59,14 +59,16 @@ export function HomeHeader({ logo, avatarName, avatarImage }) {
               </div>
               {user && (
                 <div className="bg-slate-900 w-[19rem] h-[6rem] absolute  ">
+                  <Link href='/dashboard'> 
                   <NavBarIcon
                     iconName={"my profile"}
                     className={
-                      "list-none absolute top-0 px-2 pt-1 border-b-2 flex flex-row-reverse items-center justify-between gap-12"
+                      "list-none absolute top-0 px-2 pt-1 border-b-2 flex flex-row-reverse items-center justify-between gap-12 "
                     }
                     span={""}
                     icon={<LuContact />}
-                  />
+                    />
+                    </Link>
                   <NavBarIcon
                     iconName={"sign out"}
                     className={

@@ -8,7 +8,7 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 export default function MenuBar() {
   return (
-    <section className="p-4 border border-[#02002D] flex items-center justify-between w-full rounded-lg capitalize ">
+    <section className="p-2 border border-[#02002D] flex items-center justify-between w-full rounded-lg capitalize ">
       <div>
         <NavBarIcon
           icon={<RiMenuUnfold4Line2 />}

@@ -43,13 +43,6 @@ const Dashboard = () => {
           <h1>voting History</h1>
           <section className="space-y-3 border border-3 h-[30rem] p-2">
             <VoterCard />
-            <Image
-              src={"/Frame25.svg"}
-              width={250}
-              height={250}
-              priority={true}
-              alt="card"
-            />
           </section>
         </div>
       </div>

@@ -82,18 +82,18 @@ export function KycStatusChecker(status) {
 
 export function VoterCard() {
   return (
-    <div className="grid grid-cols-1 content-between bg-[url('/dashboard/Group.svg')] bg-slate-500 bg-cover bg-left h-32 text-xs rounded-lg p-1 ">
-      <h3>The time fest for all votes:</h3>
-      <footer className=" flex justify-between items-center ">
-        <ul className="inline-flex text-[.48rem] items-center gap-2">
-          <li className="badge text-[.44rem]  -py-1">ended</li>
+    <div className="grid grid-cols-1 content-between bg-[url('/dashboard/Group.svg')] bg-[#1F0322] bg-auto bg-left bg-no-repeat h-32 text-xs rounded-lg py-1 px-2 w-[10rem] ">
+      <h3 className='text-slate-50'>The time fest for all votes:</h3>
+      <footer className=" flex justify-between items-center  ">
+        <ul className="inline-flex text-[.4rem] items-center gap-2 text-slate-50">
+          <li className="badge border-0 bg-slate-500 text-[.44rem]  -py-1">{`ended`}</li>
           <li>
-            About {`300k`} votes <span className="text-success">verified</span>{" "}
+            About {`300k`} votes <span className="text-success">{`verified`}</span>{" "}
           </li>
         </ul>
-        <span className="inline-flex items-center gap-1 justify-self-end text-orange-400 ">
-          invited
-          <VscPersonAdd />
+        <span className="inline-flex items-center gap-1 justify-self-end text-orange-400 text-[.8em] ">
+         {` Invited`}
+         { <VscPersonAdd />}
         </span>
       </footer>
     </div>
