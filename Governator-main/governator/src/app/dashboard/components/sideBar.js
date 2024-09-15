@@ -2,7 +2,7 @@ import { sideBar, Logo, NavBarIcon } from "./helper";
 import Link from "next/link";
 function SideBar() {
   return (
-    <section className="min-w-fit md:w-1/4 capitalize h-screen ">
+    <section className="min-w-fit md:w-1/4 capitalize h-screen border">
       <header className=" border border-[#02002D] p-4 ">
         <Link key="scd" href="/home">
           <Logo
