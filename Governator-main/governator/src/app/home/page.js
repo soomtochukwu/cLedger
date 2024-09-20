@@ -6,14 +6,14 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 const Home = () => {
-  const 
-    { address, isConnected } = useAccount(),
-    { push } = useRouter();
-  useEffect(() => {
-    if (!(address, isConnected)) {
-      push("/");
-    }
-  }, [address, isConnected, push]);
+  // const 
+  //   { address, isConnected } = useAccount(),
+  //   { push } = useRouter();
+  // useEffect(() => {
+  //   if (!(address, isConnected)) {
+  //     push("/");
+  //   }
+  // }, [address, isConnected, push]);
   return (
     <div className=" space-y-3 gap-y-4 m-auto flex items-center justify-center flex-col">
       <div className="lg:w-4/6">

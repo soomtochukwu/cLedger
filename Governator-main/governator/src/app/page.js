@@ -1,32 +1,30 @@
 "use client";
-
-import React, { useEffect, useState } from "react";
+import React, { useEffect , useState } from "react";
 import HeaderLogo, { Logo } from "../components/HeaderLogo";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa";
-import { useAccount } from "wagmi";
-import { useRouter } from "next/navigation";
+// import { useAccount } from "wagmi";
+// import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 const Governator = () => {
   const [email, setEmail] = useState("");
-  const { isConnected, address } = useAccount();
-  const { push } = useRouter();
-  useEffect(() => {
-    if (!(address, isConnected)) {
-      push("/");
-    }
-  }, [address, isConnected, push]);
+  // const { isConnected, address } = useAccount();
+  // const { push } = useRouter();
+  // useEffect(() => {
+  //   if (address && isConnected) {
+  //     push("/");
+  //   }
+  // }, [address, isConnected, push]);
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(email);
     setEmail("");
   }
 
   return (
     <div className="bg-[#F8F8Fe] h-full  pt-4 text-[#0D0D0D] space-y-24">
-      <HeaderLogo addOnstyles={" font-bold px-3 "} />
+      < HeaderLogo addOnstyles={" font-bold px-3 "} />
       <div className=" text-center space-y-4 ">
         <h1 className="first-letter:capitalize font-bold text-3xl tracking-wider  ">
           It's not just a decisions

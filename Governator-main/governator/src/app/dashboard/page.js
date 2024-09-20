@@ -1,16 +1,14 @@
 "use client";
+import { GrAscend } from "react-icons/gr";
+import { user } from "./components/helper";
+
 import {
   DashBoardAvartarCard,
   VoterCard,
   ActivityCard,
+  NavBarIcon,
 } from "./components/helper";
 import { FaArrowUp } from "react-icons/fa6";
-export const user = {
-  username: "John Doe",
-  id: "123456 ",
-  status: false,
-  src: "/dashboard/animoji.svg",
-};
 
 const Dashboard = () => {
   function copyId() {
@@ -24,7 +22,11 @@ const Dashboard = () => {
         <div>
           <h1> Dashboard</h1>
           <section className="space-y-5">
-            <DashBoardAvartarCard {...user} func={copyId} />
+            <DashBoardAvartarCard
+              {...user}
+              func={copyId}
+              dashBoardEdit={() => alert("Edit Profile")}
+            />
             <div className="flex items-start gap-2 justify-start flex-wrap">
               <ActivityCard
                 icon={
@@ -45,8 +47,15 @@ const Dashboard = () => {
           </section>
         </div>
         <div>
-          <h1>voting History</h1>
-          <section className="space-y-3 border border-3 h-[30rem] p-2">
+          <div className="flex items-center gap-2 px-1 justify-between">
+            <h1>voting History</h1>
+            <NavBarIcon
+              className={"list-none  text-right"}
+              icon={<GrAscend />}
+              onClick={() => alert("View All")}
+            />
+          </div>
+          <section className="space-y-3 border border-3 h-[30rem] p-2 overflow-x-hidden scroll-smooth ">
             <VoterCard eligiblity={true} votingStatues={true} counts={299} />
           </section>
         </div>
