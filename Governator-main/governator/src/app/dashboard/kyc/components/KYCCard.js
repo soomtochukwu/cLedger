@@ -1,51 +1,38 @@
-const KYCLevelCard = ({
-  level,
-  perks,
-  requirements,
-  buttonText,
-  highlighted = false,
-}) => {
+"use client";
+import { ListItem } from "./kycHelper";
+
+export const KycCard = ({ level, perks, requirements, done, showLevel }) => {
   return (
     <div
-      className={`p-6 border rounded-lg text-nowrap text-left ${"hover:border-[#00ff85]"}`}
+      className={`space-y-5 border border-success w-[15rem] p-3 rounded-lg text-center hover:bg-slate-700 hover:text-white duration-300 shadow-md   ${
+        done && "bg-slate-600 hover:bg-slate-600 border-transparent text-white"
+      }`}
+      onClick={showLevel}
     >
-      <h3
-        className={`text-lg font-semibold mb-4 ${
-          highlighted ? "text-[#010014]" : "text-[#020617]"
+      <h4 className="card-title card"> level {level} </h4>
+      <article className="text-left space-y-2  capitalize">
+        <h5>peaks</h5>
+        {perks.map((item) => (
+          <div>
+            <ListItem text={item} />
+          </div>
+        ))}
+      </article>
+      <article className="text-left space-y-2 capitalize">
+        <h5>requirements</h5>
+        {requirements.map((item) => (
+          <div>
+            <ListItem text={item} />
+          </div>
+        ))}
+      </article>
+      <button
+        className={`capitalize btn p-[px] min-h-3 h-8 hover:btn-success hover:text-white border-0 text-white ${
+          done && "bg-slate-600 hover:bg-slate-600 hover:text-white"
         }`}
       >
-        Level {level}
-      </h3>
-
-      <div className="mb-6">
-        <h4 className="font-semibold text-[#020617]">Perks</h4>
-        <ul className="list-none text-sm text-[#010014]">
-          {perks.map((perk, index) => (
-            <li key={index} className="flex items-center">
-              <span className="mr-2 text-green-500">●</span> {perk}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="mb-6">
-        <h4 className="font-semibold text-[#020617]">Requirements</h4>
-        <ul className="list-none text-sm text-[#010014]">
-          {requirements.map((requirement, index) => (
-            <li key={index} className="flex items-center">
-              <span className="mr-2 text-green-500">●</span> {requirement}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <button
-        className={`w-full py-3 rounded-md text-white bg-gray-500 ${" hover:bg-[#00e074]"}`}
-      >
-        {buttonText}
+        {done ? "done" : "start kyc"}
       </button>
     </div>
   );
 };
-
-export default KYCLevelCard;

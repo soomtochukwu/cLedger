@@ -1,11 +1,30 @@
-import KYCVerification from "../components/KYCVerfication";
+"use client";
+
+import { useState } from "react";
+import { KycCard } from "./components/KycCard";
+import { levels } from "./components/kycHelper";
+
 const KYCPage = () => {
+  const [kycState, setKycState] = useState("not complete");
+
+  const show = (id) => {
+    setKycState(String(id));
+  };
+
   return (
-    <div className="p-8">
-      <div className="flex gap-6">
-        <KYCVerification />
+    <section className="space-y-8 my-10 pb-3">
+      <h3 className="card-title sticky top-0 left-0 bg-white duration-300">
+        {" "}
+        My Kyc level : {`Level ${kycState !== "3" ? kycState : "complete"}`}
+      </h3>
+      <div className=" flex items-center gap-20 flex-wrap  justify-center duration-300">
+        {levels.map((kyc) => (
+          <div>
+            <KycCard {...kyc} showLevel={() => show(kyc.level)} />
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 
