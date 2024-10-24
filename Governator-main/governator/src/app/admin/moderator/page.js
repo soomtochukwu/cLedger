@@ -2,14 +2,24 @@
 
 import { IoIosPersonAdd } from "react-icons/io";
 import { useState } from "react";
+import Card from "./components/ModCard";
 
 export default function ModeratorPage() {
   const [address, setAddress] = useState("");
+  const [poll, setPoll] = useState([]);
 
   function submit(e) {
     e.preventDefault();
-    const data = new String(address);
-    console.log(data);
+    let copy = new Date();
+    const data = {
+      name: new String(address),
+      time: copy.toTimeString(),
+      date: copy.toDateString(),
+      created: " kenzo",
+    };
+    const newObject = poll.concat(data);
+    setPoll(newObject);
+    setAddress("");
   }
   return (
     <div className="mb-3">
@@ -33,6 +43,14 @@ export default function ModeratorPage() {
           </button>
         </form>
       </section>
+      {poll?.map((mod) => (
+        <Card
+          name={mod.name}
+          time={mod.time}
+          date={mod.date}
+          created={mod.created}
+        />
+      ))}
     </div>
   );
 }
