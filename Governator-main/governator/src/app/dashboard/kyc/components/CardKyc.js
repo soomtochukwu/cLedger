@@ -1,7 +1,7 @@
 "use client";
-import ListItem from "./KycHelper";
+import ListItem from "/KycHelper";
 
-const KycCard = ({ level, perks, requirements, done, showLevel }) => {
+const CardKyc = ({ level, perks, requirements, done, showLevel }) => {
   return (
     <div
       className={`space-y-5 border border-success w-[15rem] p-3 rounded-lg text-center hover:bg-slate-700 hover:text-white duration-300 shadow-md   ${
@@ -33,4 +33,4 @@ const KycCard = ({ level, perks, requirements, done, showLevel }) => {
   );
 };
 
-export default KycCard;
+export default CardKyc;

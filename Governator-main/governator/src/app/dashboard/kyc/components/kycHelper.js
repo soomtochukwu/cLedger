@@ -27,7 +27,7 @@ export const levels = [
       "Can create up to 50 public votes and 15 private votes",
     ],
     requirements: [
-      "Your proof of address",
+      "Your proof of home address",
       "Your recent 3 months utility bill",
     ],
     done: false,
