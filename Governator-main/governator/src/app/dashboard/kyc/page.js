@@ -1,8 +1,7 @@
 "use client";
-
 import { useState } from "react";
-import { KycCard } from "./components/KycCard";
 import { levels } from "./components/kycHelper";
+import KycCard from "./components/KycCard";
 
 const KYCPage = () => {
   const [kycState, setKycState] = useState("not complete");
