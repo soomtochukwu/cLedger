@@ -8,7 +8,7 @@ export function Logo({ src, className, span, spanName, width, height }) {
   return (
     <div className="flex items-center gap-2">
       <Image
-        src={src} // Replace with the actual logo path
+        src={src || null} // Replace with the actual logo path
         alt="Governator Logo"
         width={width}
         height={height}
@@ -19,12 +19,7 @@ export function Logo({ src, className, span, spanName, width, height }) {
   );
 }
 
-export const NavBarIcon = ({
-  className,
-  span,
-  icon,
-  iconName
-}) => {
+export const NavBarIcon = ({ className, span, icon, iconName }) => {
   return (
     <li className={className}>
       {icon}
@@ -39,7 +34,7 @@ export function NotificationCard({ avater, name, purpose, time }) {
         <span className="inline-flex items-center gap-1">
           {" "}
           <Image
-            src={avater}
+            src={avater || null}
             width={30}
             height={30}
             priority={true}
@@ -92,10 +87,34 @@ export function HomeVoteCard({ trend }) {
     <article className="md:flex  items-center justify-between pb-1">
       <div className="inline-flex  items-center gap-2">
         <div className="inline-flex ">
-          <Image src={`/animoji3.png`} width={30} height={30} priority={true} alt="card" />
-          <Image src={`/animoji3.png`} width={30} height={30} priority={true} alt="card" />
-          <Image src={`/animoji3.png`} width={30} height={30} priority={true} alt="card" />
-          <Image src={`/animoji3.png`} width={30} height={30} priority={true} alt="card" />
+          <Image
+            src={`/animoji3.png`}
+            width={30}
+            height={30}
+            priority={true}
+            alt="card"
+          />
+          <Image
+            src={`/animoji3.png`}
+            width={30}
+            height={30}
+            priority={true}
+            alt="card"
+          />
+          <Image
+            src={`/animoji3.png`}
+            width={30}
+            height={30}
+            priority={true}
+            alt="card"
+          />
+          <Image
+            src={`/animoji3.png`}
+            width={30}
+            height={30}
+            priority={true}
+            alt="card"
+          />
         </div>
         <p className="text-xs first-letter:capitalize">
           about <span className="text-green-500"> {`120`}k </span>votes and
@@ -136,5 +155,3 @@ export const sideBar = [
     name: "kyc verification",
   },
 ];
-
-

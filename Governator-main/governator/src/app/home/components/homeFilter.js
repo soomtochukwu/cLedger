@@ -1,7 +1,8 @@
 "use client";
-
-import { IoMdArrowDropdown } from "react-icons/io";
 import { useState } from "react";
+import { LuContact } from "react-icons/lu";
+import { HiOutlineLogout } from "react-icons/hi";
+import { IoMdArrowDropdown } from "react-icons/io";
 
 export function HomeFilter() {
   const [state, setState] = useState(false);
@@ -57,3 +58,41 @@ export function HomeFilter() {
     </section>
   );
 }
+
+const HomeScreenMenu = () => {
+  return (
+    <div className="bg-slate-900 w-fit h-[6rem] absolute translate-x-[-10rem]  ">
+      <Link href="/dashboard">
+        <NavBarIcon
+          iconName={"my profile"}
+          className={
+            "list-none top-0 px-2 pt-1 border-b-2 flex flex-row-reverse items-center justify-between gap-12 "
+          }
+          span={""}
+          icon={<LuContact />}
+        />
+      </Link>
+      <NavBarIcon
+        iconName={"sign out"}
+        className={
+          "list-none absolute bottom-0 px-2 pb-1 border-t-2 flex flex-row-reverse  items-center justify-between gap-16"
+        }
+        icon={<HiOutlineLogout />}
+      />
+      <NavBarIcon
+        iconName={"sign out"}
+        className={
+          "list-none absolute bottom-0 px-2 pb-1 border-t-2 flex flex-row-reverse  items-center justify-between gap-16"
+        }
+        icon={<HiOutlineLogout />}
+      />
+      <NavBarIcon
+        iconName={"sign out"}
+        className={
+          "list-none absolute bottom-0 px-2 pb-1 border-t-2 flex flex-row-reverse  items-center justify-between gap-16"
+        }
+        icon={<HiOutlineLogout />}
+      />
+    </div>
+  );
+};

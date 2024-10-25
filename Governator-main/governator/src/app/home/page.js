@@ -1,13 +1,12 @@
 "use client";
 import { HomeFilter } from "./components/homeFilter";
 import { HomeTracker, HomeVoteCard } from "./components/helper";
-import { useAccount } from "wagmi";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+// import { useAccount } from "wagmi";
+// import { useRouter } from "next/navigation";
+// import { useEffect } from "react";
 
 const Home = () => {
-  // const 
-  //   { address, isConnected } = useAccount(),
+  // const { address, isConnected } = useAccount(),
   //   { push } = useRouter();
   // useEffect(() => {
   //   if (!(address, isConnected)) {
@@ -15,7 +14,7 @@ const Home = () => {
   //   }
   // }, [address, isConnected, push]);
   return (
-    <div className=" space-y-3 gap-y-4 m-auto flex items-center justify-center flex-col">
+    <div className=" space-y-3 gap-y-4 m-auto flex items-center justify-center flex-col bg-red-800">
       <div className="lg:w-4/6">
         <HomeFilter />
         <div className="text-left">

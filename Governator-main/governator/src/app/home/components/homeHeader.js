@@ -3,11 +3,10 @@ import { Logo } from "./helper";
 import { NavBarIcon } from "./helper";
 import { IoIosNotificationsOutline } from "react-icons/io";
 import { useState } from "react";
-import { LuContact } from "react-icons/lu";
-import { HiOutlineLogout } from "react-icons/hi";
+
 import Link from "next/link";
 
-export function HomeHeader({ logo, avatarName, avatarImage }) {
+export function HomeHeader() {
   const [user, setUser] = useState(false);
 
   const handleClick = () => {
@@ -16,7 +15,7 @@ export function HomeHeader({ logo, avatarName, avatarImage }) {
 
   return (
     <section>
-      <header className=" flex items-center justify-between rounded-lg border  py-2">
+      <header className=" flex items-center justify-between rounded-lg border bg-slate-500 ">
         <Link key="scd" href="/home">
           <Logo
             src={"/logo.png"}
@@ -48,50 +47,16 @@ export function HomeHeader({ logo, avatarName, avatarImage }) {
               iconName={""}
             />
             <li onClick={handleClick}>
-              <div className="border p-2 rounded-[2rem]">
+              <div className=" ">
                 <Logo
-                  src={avatarImage}
-                  width={40}
-                  height={40}
-                  spanName={avatarName}
-                  span={"text-lg font-bold text-[#fefefe] capitalize "}
+                  src={null}
+                  width={30}
+                  height={20}
+                  spanName={"cobby"}
+                  span={" text-[#fefefe] capitalize "}
                 />
               </div>
-              {user && (
-                <div className="bg-slate-900 w-[19rem] h-[6rem] absolute  ">
-                  <Link href='/dashboard'> 
-                  <NavBarIcon
-                    iconName={"my profile"}
-                    className={
-                      "list-none absolute top-0 px-2 pt-1 border-b-2 flex flex-row-reverse items-center justify-between gap-12 "
-                    }
-                    span={""}
-                    icon={<LuContact />}
-                    />
-                    </Link>
-                  <NavBarIcon
-                    iconName={"sign out"}
-                    className={
-                      "list-none absolute bottom-0 px-2 pb-1 border-t-2 flex flex-row-reverse  items-center justify-between gap-16"
-                    }
-                    icon={<HiOutlineLogout />}
-                  />
-                  <NavBarIcon
-                    iconName={"sign out"}
-                    className={
-                      "list-none absolute bottom-0 px-2 pb-1 border-t-2 flex flex-row-reverse  items-center justify-between gap-16"
-                    }
-                    icon={<HiOutlineLogout />}
-                  />
-                  <NavBarIcon
-                    iconName={"sign out"}
-                    className={
-                      "list-none absolute bottom-0 px-2 pb-1 border-t-2 flex flex-row-reverse  items-center justify-between gap-16"
-                    }
-                    icon={<HiOutlineLogout />}
-                  />
-                </div>
-              )}
+              {user && <></>}
             </li>
           </ul>
         </nav>
