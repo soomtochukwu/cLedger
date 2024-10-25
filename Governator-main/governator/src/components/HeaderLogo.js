@@ -11,11 +11,11 @@ const Header = ({ addOnstyles }) => {
         <ConnectButton
           accountStatus={{
             smallScreen: "avatar",
-            largeScreen: "avatar",
+            largeScreen: "full",
           }}
           chainStatus="icon"
           showBalance={{
-            smallScreen: true,
+            smallScreen: false,
             largeScreen: false,
           }}
           label="Get started"
