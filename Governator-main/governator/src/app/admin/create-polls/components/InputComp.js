@@ -64,29 +64,6 @@ const Input = (props) => {
   );
 };
 
-const DropArea = ({ Drop }) => {
-  const [isDragging, setIsDragging] = useState(false);
-
-  return (
-    <section
-      droppable="true"
-      onDragEnter={() => setIsDragging(true)}
-      onDragLeave={() => setIsDragging(false)}
-      onDragOver={(e) => e.preventDefault()}
-      onDrop={(e) => {
-        setIsDragging(false);
-        Drop(e);
-      }}
-      className={
-        ("h-2/3 border-2 border-dashed p-4 transition-all",
-        isDragging ? "border-green-500 bg-green-100" : "border-gray-300")
-      }
-    >
-      <p className="text-[.6rem]">Drop here</p>
-    </section>
-  );
-};
-
 const Card = ({ item, editProp, autoSave, deleteName, editName }) => {
   return (
     <div className="w-full">
@@ -108,4 +85,4 @@ const Card = ({ item, editProp, autoSave, deleteName, editName }) => {
   );
 };
 
-export { Input, Card, DropArea };
+export { Input, Card };
