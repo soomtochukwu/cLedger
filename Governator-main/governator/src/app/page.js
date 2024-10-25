@@ -3,19 +3,19 @@ import React, { useEffect , useState } from "react";
 import HeaderLogo, { Logo } from "../components/HeaderLogo";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa";
-// import { useAccount } from "wagmi";
-// import { useRouter } from "next/navigation";
+import { useAccount } from "wagmi";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 const Governator = () => {
   const [email, setEmail] = useState("");
-  // const { isConnected, address } = useAccount();
-  // const { push } = useRouter();
-  // useEffect(() => {
-  //   if (address && isConnected) {
-  //     push("/");
-  //   }
-  // }, [address, isConnected, push]);
+  const { isConnected, address } = useAccount();
+  const { push } = useRouter();
+  useEffect(() => {
+    if (address && isConnected) {
+      push("/");
+    }
+  }, [address, isConnected, push]);
 
   function handleSubmit(e) {
     e.preventDefault();

@@ -21,14 +21,17 @@
         "name": "next"
       }
     ],
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "src/app/loading.jsx", "src/app/layout.jsx"  ],
+    "**/*.tsx",
+    "src/app/loading.jsx",
+    "src/app/layout.jsx"
+  ],
   "exclude": [
     "node_modules"
   ]
