@@ -1,8 +1,10 @@
 "use client";
 import { useState } from "react";
 import { LuContact } from "react-icons/lu";
+import { NavBarIcon } from "./helper";
 import { HiOutlineLogout } from "react-icons/hi";
 import { IoMdArrowDropdown } from "react-icons/io";
+import Link  from "Next/link";
 
 export function HomeFilter() {
   const [state, setState] = useState(false);
@@ -14,7 +16,6 @@ export function HomeFilter() {
 
   const handleValue = (e) => {
     setSelectValue(e.target.value);
-    console.log(e.target.value);
   };
 
   return (
