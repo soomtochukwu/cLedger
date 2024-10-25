@@ -1,10 +1,11 @@
-const Card = ({ name, time, date, created }) => {
+const Card = ({ name, time, date }) => {
   return (
-    <div className="border border-green-600 m-0.5 p-0.5 w-fit rounded-lg ">
+    <div className="border border-green-600 my-1 px-1 w-fit rounded-lg  ">
       <h5>{name}</h5>
-      <small>{time}</small>
-      <small>{date}</small>
-      <p className="text-xs">{created}</p>
+      <small className="badge badge-primary rounded-md text-xs mr-2">
+        {time}
+      </small>
+      <small className="badge badge-primary rounded-md text-xs">{date}</small>
     </div>
   );
 };

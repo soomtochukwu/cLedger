@@ -1,10 +1,12 @@
 import { MdAddToQueue } from "react-icons/md";
-import { Card, DropArea, Input } from "./InputComp";
+import { Card, Input } from "./InputComp";
 import { InitialState, ActionType, reducer, former } from "./ReducerContext";
 import { Fragment, useReducer, useState } from "react";
 import { RiUserAddFill } from "react-icons/ri";
 export default function Forms() {
   const [state, dispatch] = useReducer(reducer, InitialState);
+
+  let extracted = former(state);
 
   const handle = (e, identifier) => {
     const { value, type, checked } = e.target;
@@ -13,18 +15,14 @@ export default function Forms() {
       field: identifier,
       value: type === "checkbox" ? checked : value,
     });
-    
   };
 
   const submit = (e) => {
     e.preventDefault();
-    const data = extracted.map((value) => {
+    extracted.map((value) => {
       return { name: value.id, value: value.config.value };
     });
-    console.log(data);
   };
-
-  let extracted = former(state);
 
   return (
     <section className=" ">
@@ -54,16 +52,13 @@ export const MultiOption = (props) => {
   const [state, dispatch] = useReducer(reducer, InitialState);
   const [candidate, setCandidate] = useState("");
   const [editMode, setEditMode] = useState(false);
-  // const [dragItemIndex, setDragItemIndex] = useState(null)
 
   const change = (e) => {
     setCandidate(e.target.value);
   };
 
   function geneRate() {
-    // let codeNumber = "1234567890"
-    const value = Math.random() * 1000;
-    value.toFixed(0);
+    const value = Math.floor(Math.random() * (1000 - 1)) + 1;
     return value;
   }
 

@@ -54,7 +54,7 @@ const Input = (props) => {
     >
       <label
         className={
-          props.style === "half" ? "  w-fit text-nowrap" : " text-nowrap "
+          props.style === "half" ? "  w-fit text-nowrap text-right" : " text-nowrap "
         }
       >
         {props.label}

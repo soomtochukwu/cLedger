@@ -1,5 +1,5 @@
 "use client";
-import ListItem from "./kycHelper";
+import ListItem from "./KycHelper";
 
 const KycCard = ({ level, perks, requirements, done, showLevel }) => {
   return (

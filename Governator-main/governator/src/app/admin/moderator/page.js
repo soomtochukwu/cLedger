@@ -12,10 +12,9 @@ export default function ModeratorPage() {
     e.preventDefault();
     let copy = new Date();
     const data = {
-      name: new String(address),
-      time: copy.toTimeString(),
-      date: copy.toDateString(),
-      created: " kenzo",
+      name: String(address),
+      time: copy.toLocaleTimeString(),
+      date: copy.toLocaleDateString(),
     };
     const newObject = poll.concat(data);
     setPoll(newObject);
@@ -45,10 +44,11 @@ export default function ModeratorPage() {
       </section>
       {poll?.map((mod) => (
         <Card
+          key={mod.name}
           name={mod.name}
           time={mod.time}
           date={mod.date}
-          created={mod.created}
+          
         />
       ))}
     </div>
