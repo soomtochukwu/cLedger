@@ -18,11 +18,7 @@ const KYCPage = () => {
       </h3>
       <div className=" flex items-center gap-20 flex-wrap  justify-center duration-300">
         {levels.map((kyc) => (
-          <KycCard
-            key={kyc.level}
-            {...kyc}
-            kshowLevel={() => show(kyc.level)}
-          />
+          <KycCard key={kyc.level} {...kyc} showLevel={() => show(kyc.level)} />
         ))}
       </div>
     </section>

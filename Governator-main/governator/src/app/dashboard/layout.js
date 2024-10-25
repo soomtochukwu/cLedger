@@ -1,6 +1,6 @@
 "use client";
 
-import { useAccount } from "wagmi";
+// import { useAccount } from "wagmi";
 import MenuBar from "./components/menubar";
 import SideBar from "./components/sideBar";
 import { usePathname, useRouter } from "next/navigation";
@@ -19,7 +19,7 @@ export default function DashboardLayout({ children }) {
   // }, [isConnected, address]);
   return (
     <main className="relative w-full h-screen overflow-hidden flex py-2 px-1 text-blue-950 gap-2">
-      <SideBar sidebar={false} />
+      <SideBar />
       <div className=" w-full h-full ">
         <MenuBar />
         <h1 className="text-2xl font-bold">{pathName[2]}</h1>

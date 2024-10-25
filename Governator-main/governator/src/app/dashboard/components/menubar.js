@@ -1,8 +1,4 @@
-import { Logo } from "./helper";
 import { NavBarIcon } from "./helper";
-import { IoIosNotificationsOutline } from "react-icons/io";
-import { TbSettings2 } from "react-icons/tb";
-
 import { RiMenuUnfold4Line2 } from "react-icons/ri";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 

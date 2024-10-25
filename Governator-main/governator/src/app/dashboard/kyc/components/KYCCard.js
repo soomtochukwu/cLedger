@@ -12,18 +12,14 @@ const KycCard = ({ level, perks, requirements, done, showLevel }) => {
       <h4 className="card-title card"> level {level} </h4>
       <article className="text-left space-y-2  capitalize">
         <h5>peaks</h5>
-        {perks.map((item) => (
-          <div>
-            <ListItem text={item} />
-          </div>
+        {perks.map((item, index) => (
+          <ListItem key={index} text={item} />
         ))}
       </article>
       <article className="text-left space-y-2 capitalize">
         <h5>requirements</h5>
-        {requirements.map((item) => (
-          <div>
-            <ListItem text={item} />
-          </div>
+        {requirements.map((item, index) => (
+          <ListItem key={index} text={item} />
         ))}
       </article>
       <button

@@ -4,7 +4,7 @@ function SideBar() {
   return (
     <section className="min-w-fit md:w-1/4 capitalize h-screen border">
       <header className=" border border-[#02002D] p-4 ">
-        <Link key="scd" href="/home">
+        <Link href="/home">
           <Logo
             className="object-contain"
             span="text-2xl font-bold hidden md:flex"
@@ -14,7 +14,6 @@ function SideBar() {
             spanName={"Governator"}
           />
         </Link>
-
       </header>
       <nav className="border border-t-0 border-[#02002D] h-full">
         <ul className="py-4 space-y-8 transition ease-in-out text-nowrap">
