@@ -173,11 +173,6 @@ export const sideBar = [
     name: "kyc verification",
     path: "/dashboard/kyc",
   },
-  {
-    icon: <IoIosNotificationsOutline />,
-    name: "notification",
-    path: "/dashboard/notification",
-  },
 ];
 
 export const adminSideBar = [

@@ -189,7 +189,7 @@ align-items: center;
     if (!(isConnected && address)) {
       push("/");
     }
-  }, [isConnected, address, push]);
+  }, [isConnected, address]);
 
   useEffect(() => {
     if (address && isConnected && Person.data) {
@@ -202,7 +202,7 @@ align-items: center;
 
   useEffect(() => {
     isRegistered ? push("/dashboard") : null;
-  }, [isRegistered, push]);
+  }, [isRegistered]);
   useEffect(() => {}, []);
   useEffect(() => {
     if (hash.length) {

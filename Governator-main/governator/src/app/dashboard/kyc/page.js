@@ -1,7 +1,41 @@
 "use client";
 import { useState } from "react";
-import { levels } from "/components/KycHelper";
-import CardKyc from "/components/CardKyc";
+import CardKyc from "./components/CardKyc";
+const levels = [
+  {
+    level: 1,
+    perks: [
+      "Can participate on up to 100 public votes, and 15 private votes",
+      "Create up to 10 public polls",
+    ],
+    requirements: ["Your BVN or NIN", "Your visual identity"],
+    done: true,
+  },
+  {
+    level: 2,
+    perks: [
+      "Can participate on up to 500 public votes, and 50 private votes",
+      "Can create up to 50 public votes and 15 private votes",
+    ],
+    requirements: [
+      "Your proof of address",
+      "Your recent 3 months utility bill",
+    ],
+    done: false,
+  },
+  {
+    level: 3,
+    perks: [
+      "Can participate on up to 500 public votes, and 50 private votes",
+      "Can create up to 50 public votes and 15 private votes",
+    ],
+    requirements: [
+      "Your proof of home address",
+      "Your recent 3 months utility bill",
+    ],
+    done: false,
+  },
+];
 
 const Kyc = () => {
   const [kycState, setKycState] = useState("not complete");

@@ -1,5 +1,5 @@
 import { FaRegCopy } from "react-icons/fa6";
-import Mycard from "/Mycard";
+import Mycard from "./Mycard";
 import { RiMenuFold2Fill } from "react-icons/ri";
 const Carddetails = ({ voteId, func }) => {
   function copyId() {

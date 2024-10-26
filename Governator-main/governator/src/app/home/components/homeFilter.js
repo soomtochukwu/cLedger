@@ -4,7 +4,7 @@ import { LuContact } from "react-icons/lu";
 import { NavBarIcon } from "./helper";
 import { HiOutlineLogout } from "react-icons/hi";
 import { IoMdArrowDropdown } from "react-icons/io";
-import Link  from "Next/link";
+import Link from "next/link";
 
 export function HomeFilter() {
   const [state, setState] = useState(false);
